@@ -26,7 +26,7 @@ public class UtilisateurServiceImpl implements UtilisateurService{
     @Autowired
     private IUtilisateurDAO uDao ;
     @Autowired
-    private MailService mserv ;
+    private IMailService mserv ;
 
     @Override
     public void ajouter(Utilisateur u) {

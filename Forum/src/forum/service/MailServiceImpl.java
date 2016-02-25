@@ -6,14 +6,17 @@
 package forum.service;
 
 import forum.entity.Utilisateur;
+import org.springframework.stereotype.Service;
 
 /**
  *
  * @author admin
  */
-public class MailService {
+@Service
+public class MailServiceImpl implements IMailService{
     
     
+    @Override
     public void envoyerMail(Utilisateur dest, String titre, String message){
         System.out.println("email envoyé");
     }

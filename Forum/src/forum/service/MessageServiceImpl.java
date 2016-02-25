@@ -6,7 +6,6 @@
 package forum.service;
 
 import forum.dao.MessageDAO;
-import forum.dao.MessageDAOJpaImpl;
 import forum.entity.Message;
 import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;

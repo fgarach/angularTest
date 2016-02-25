@@ -5,24 +5,21 @@
  */
 package forum.dao;
 
-import forum.entity.Message;
+import forum.entity.Sujet;
 import java.util.List;
-
 
 /**
  *
  * @author admin
  */
-public interface MessageDAO {
-    
-     public void ajouter(Message m) ;
+public interface ISujetDAO {
+    public void ajouter(Sujet s) ;
 
-    public void supprimer(Long id) ;
+    public void supprimer(Long id);
 
-    public void modifier(Message m);
+    public void modifier(Sujet s);
 
-    public Message rechercherParId(Long id) ;
+    public Sujet rechercherParId(Long id);
 
-    public List<Message> listerTous();
-    
+    public List<Sujet> listerTous();
 }
