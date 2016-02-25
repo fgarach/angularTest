@@ -7,13 +7,16 @@ package forum.service;
 
 import javax.persistence.EntityManager;
 import javax.persistence.Persistence;
+import org.springframework.stereotype.Repository;
 
 /**
  *
  * @author admin
  */
-public class DBService {
+@Repository
+public class DBServiceImpl implements IDBService{
     
+    @Override
     public void supprimerAll(){
         EntityManager em = Persistence.createEntityManagerFactory("ForumPU").createEntityManager();
         em.getTransaction().begin();
