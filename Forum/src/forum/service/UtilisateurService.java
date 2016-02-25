@@ -5,7 +5,7 @@
  */
 package forum.service;
 
-import forum.dao.UtilisateurDAO;
+import forum.dao.UtilisateurDAOImpl;
 import forum.entity.Utilisateur;
 import forum.exception.LoginDejaPrisException;
 import forum.exception.LoginNonExistant;
@@ -20,7 +20,7 @@ import java.util.List;
  */
 public class UtilisateurService {
 
-    private UtilisateurDAO uDao = new UtilisateurDAO();
+    private UtilisateurDAOImpl uDao = new UtilisateurDAOImpl();
     private MailService mserv = new MailService();
 
     public void ajouter(Utilisateur u) {

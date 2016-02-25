@@ -8,34 +8,43 @@ package forum.service;
 import forum.dao.ForumDAO;
 import forum.entity.Forum;
 import java.util.List;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 /**
  *
  * @author admin
  */
-public class ForumService {
+@Service
+public class ForumServiceImpl implements IForumService {
 
-    private ForumDAO fDao = new ForumDAO();
+    @Autowired
+    private ForumDAO fDao;
 
+    @Override
     public void ajouter(Forum f) {
         fDao.ajouter(f);
     }
 
+    @Override
     public void supprimer(Long id) {
         fDao.supprimer(id);
 
     }
 
+    @Override
     public void modifier(Forum f) {
         fDao.modifier(f);
 
     }
 
+    @Override
     public Forum rechercherParId(Long id) {
         return fDao.rechercherParId(id);
 
     }
 
+    @Override
     public List<Forum> listerTous() {
         return fDao.listerTous();
 

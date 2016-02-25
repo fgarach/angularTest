@@ -9,13 +9,16 @@ import forum.entity.Utilisateur;
 import java.util.List;
 import javax.persistence.EntityManager;
 import javax.persistence.Persistence;
+import org.springframework.stereotype.Repository;
 
 /**
  *
  * @author admin
  */
-public class UtilisateurDAO {
+@Repository
+public class UtilisateurDAOImpl implements IUtilisateurDAO{
     
+    @Override
     public void ajouter(Utilisateur u) {
         EntityManager em = Persistence.createEntityManagerFactory("ForumPU").createEntityManager();
         em.getTransaction().begin();
@@ -23,6 +26,7 @@ public class UtilisateurDAO {
         em.getTransaction().commit();
     }
 
+    @Override
     public void supprimer(Long id) {
         EntityManager em = Persistence.createEntityManagerFactory("ForumPU").createEntityManager();
         em.getTransaction().begin();
@@ -30,6 +34,7 @@ public class UtilisateurDAO {
         em.getTransaction().commit();
     }
 
+    @Override
     public void modifier(Utilisateur u) {
         EntityManager em = Persistence.createEntityManagerFactory("ForumPU").createEntityManager();
         em.getTransaction().begin();
@@ -37,12 +42,14 @@ public class UtilisateurDAO {
         em.getTransaction().commit();
     }
 
+    @Override
     public Utilisateur rechercherParId(Long id) {
         EntityManager em = Persistence.createEntityManagerFactory("ForumPU").createEntityManager();
 
         return em.find(Utilisateur.class, id);
     }
     
+    @Override
     public Utilisateur rechercherParMail(String mail) {
         
         EntityManager em = Persistence.createEntityManagerFactory("ForumPU").createEntityManager();
@@ -63,6 +70,7 @@ public class UtilisateurDAO {
     }
     
         
+    @Override
     public Utilisateur rechercherParLogin(String login) {
         EntityManager em = Persistence.createEntityManagerFactory("ForumPU").createEntityManager();
         
@@ -78,6 +86,7 @@ public class UtilisateurDAO {
             return listU.get(0);
     }
 
+    @Override
     public List<Utilisateur> listerTous() {
         EntityManager em = Persistence.createEntityManagerFactory("ForumPU").createEntityManager();
         return em.createQuery("SELECT u FROM Utilisateur u").getResultList();
