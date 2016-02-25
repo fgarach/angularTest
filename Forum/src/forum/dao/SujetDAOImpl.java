@@ -16,7 +16,7 @@ import org.springframework.stereotype.Repository;
  * @author admin
  */
 @Repository
-public class SujetDAO {
+public class SujetDAOImpl implements SujetDAOInterface {
     
     public void ajouter(Sujet s) {
         EntityManager em = Persistence.createEntityManagerFactory("ForumPU").createEntityManager();

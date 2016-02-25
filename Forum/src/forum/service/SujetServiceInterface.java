@@ -7,7 +7,6 @@ package forum.service;
 
 import forum.entity.Sujet;
 import java.util.List;
-import org.springframework.stereotype.Component;
 
 /**
  *
