@@ -16,7 +16,7 @@ import org.springframework.stereotype.Repository;
  * @author admin
  */
 @Repository
-public class MessageDAOJpaImpl implements MessageDAO {
+public class MessageDAOJpaImpl implements MessageDAOInterface {
     
     @Override
     public void ajouter(Message m) {

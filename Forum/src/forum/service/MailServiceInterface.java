@@ -5,12 +5,12 @@
  */
 package forum.service;
 
-
+import forum.entity.Utilisateur;
 
 /**
  *
  * @author admin
  */
-public interface IDBService {
-     public void supprimerAll();
+public interface MailServiceInterface {
+        public void envoyerMail(Utilisateur dest, String titre, String message);
 }

@@ -17,7 +17,7 @@ import java.util.List;
  *
  * @author admin
  */
-public interface UtilisateurService {
+public interface UtilisateurServiceInterface {
     public void ajouter(Utilisateur u) ;
     public void supprimer(Long id) ;
     public void modifier(Utilisateur u) ;

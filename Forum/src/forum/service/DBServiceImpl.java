@@ -14,7 +14,7 @@ import org.springframework.stereotype.Repository;
  * @author admin
  */
 @Repository
-public class DBServiceImpl implements IDBService{
+public class DBServiceImpl implements DBServiceInterface{
     
     @Override
     public void supprimerAll(){

@@ -5,7 +5,6 @@
  */
 package forum.service;
 
-import forum.dao.IUtilisateurDAO;
 import forum.entity.Utilisateur;
 import forum.exception.LoginDejaPrisException;
 import forum.exception.LoginNonExistant;
@@ -15,18 +14,19 @@ import forum.exception.UtilisateurInscriptionNonValide;
 import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import forum.dao.UtilisateurDAOInterface;
 
 /**
  *
  * @author admin
  */
 @Service
-public class UtilisateurServiceImpl implements UtilisateurService{
+public class UtilisateurServiceImpl implements UtilisateurServiceInterface{
 
     @Autowired
-    private IUtilisateurDAO uDao ;
+    private UtilisateurDAOInterface uDao ;
     @Autowired
-    private IMailService mserv ;
+    private MailServiceInterface mserv ;
 
     @Override
     public void ajouter(Utilisateur u) {

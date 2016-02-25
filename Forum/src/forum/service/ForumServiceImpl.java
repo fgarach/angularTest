@@ -6,21 +6,21 @@
 package forum.service;
 
 
-import forum.dao.IForumDAO;
 import forum.entity.Forum;
 import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import forum.dao.ForumDAOInterface;
 
 /**
  *
  * @author admin
  */
 @Service
-public class ForumServiceImpl implements IForumService {
+public class ForumServiceImpl implements ForumServiceInterface {
 
     @Autowired
-    private IForumDAO fDao;
+    private ForumDAOInterface fDao;
 
     @Override
     public void ajouter(Forum f) {

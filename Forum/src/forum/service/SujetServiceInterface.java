@@ -14,7 +14,7 @@ import org.springframework.stereotype.Component;
  * @author admin
  */
 
-public interface ISujetService {
+public interface SujetServiceInterface {
 
     public void ajouter(Sujet s);
 

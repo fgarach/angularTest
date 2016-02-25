@@ -16,7 +16,7 @@ import org.springframework.stereotype.Repository;
  * @author admin
  */
 @Repository
-public class ForumDAOJpaImpl implements IForumDAO {
+public class ForumDAOJpaImpl implements ForumDAOInterface {
 
     @Override
     public void ajouter(Forum f) {

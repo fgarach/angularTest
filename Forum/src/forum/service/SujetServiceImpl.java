@@ -5,21 +5,21 @@
  */
 package forum.service;
 
-import forum.dao.ISujetDAO;
 import forum.entity.Sujet;
 import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import forum.dao.SujetDAOInterface;
 
 /**
  *
  * @author admin
  */
 @Service
-public class SujetServiceImpl implements ISujetService{
+public class SujetServiceImpl implements SujetServiceInterface{
     
     @Autowired
-    private ISujetDAO sDao;
+    private SujetDAOInterface sDao;
 
     @Override
     public void ajouter(Sujet s) {

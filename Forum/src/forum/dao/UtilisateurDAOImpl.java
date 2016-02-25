@@ -16,7 +16,7 @@ import org.springframework.stereotype.Repository;
  * @author admin
  */
 @Repository
-public class UtilisateurDAOImpl implements IUtilisateurDAO{
+public class UtilisateurDAOImpl implements UtilisateurDAOInterface{
     
     @Override
     public void ajouter(Utilisateur u) {

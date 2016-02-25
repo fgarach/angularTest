@@ -3,16 +3,18 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package forum.dao;
+package forum.service;
 
 import forum.entity.Forum;
 import java.util.List;
+import org.springframework.stereotype.Component;
 
 /**
  *
  * @author admin
  */
-public interface IForumDAO {
+
+public interface ForumServiceInterface {
 
     public void ajouter(Forum f);
 
@@ -23,4 +25,5 @@ public interface IForumDAO {
     public Forum rechercherParId(Long id);
 
     public List<Forum> listerTous();
+
 }

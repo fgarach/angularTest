@@ -5,21 +5,21 @@
  */
 package forum.service;
 
-import forum.dao.MessageDAO;
 import forum.entity.Message;
 import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import forum.dao.MessageDAOInterface;
 
 /**
  *
  * @author admin
  */
 @Service
-public class MessageServiceImpl implements MessageService{
+public class MessageServiceImpl implements MessageServiceInterface{
     
     @Autowired
-    private MessageDAO mDao ;
+    private MessageDAOInterface mDao ;
 
     @Override
     public void ajouter(Message m) {

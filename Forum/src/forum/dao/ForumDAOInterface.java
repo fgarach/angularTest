@@ -5,21 +5,22 @@
  */
 package forum.dao;
 
-import forum.entity.Sujet;
+import forum.entity.Forum;
 import java.util.List;
 
 /**
  *
  * @author admin
  */
-public interface ISujetDAO {
-    public void ajouter(Sujet s) ;
+public interface ForumDAOInterface {
+
+    public void ajouter(Forum f);
 
     public void supprimer(Long id);
 
-    public void modifier(Sujet s);
+    public void modifier(Forum f);
 
-    public Sujet rechercherParId(Long id);
+    public Forum rechercherParId(Long id);
 
-    public List<Sujet> listerTous();
+    public List<Forum> listerTous();
 }

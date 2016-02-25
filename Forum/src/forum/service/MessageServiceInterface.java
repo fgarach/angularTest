@@ -5,25 +5,24 @@
  */
 package forum.service;
 
-import forum.entity.Forum;
+import forum.entity.Message;
 import java.util.List;
-import org.springframework.stereotype.Component;
 
 /**
  *
  * @author admin
  */
-
-public interface IForumService {
-
-    public void ajouter(Forum f);
+public interface MessageServiceInterface {
+    
+    public void ajouter(Message m);
 
     public void supprimer(Long id);
 
-    public void modifier(Forum f);
+    public void modifier(Message m);
 
-    public Forum rechercherParId(Long id);
+    public Message rechercherParId(Long id);
 
-    public List<Forum> listerTous();
+    public List<Message> listerTous();
 
+    
 }

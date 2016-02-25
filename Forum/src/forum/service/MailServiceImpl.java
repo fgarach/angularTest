@@ -13,7 +13,7 @@ import org.springframework.stereotype.Service;
  * @author admin
  */
 @Service
-public class MailServiceImpl implements IMailService{
+public class MailServiceImpl implements MailServiceInterface{
     
     
     @Override

@@ -12,7 +12,7 @@ import java.util.List;
  *
  * @author admin
  */
-public interface IUtilisateurDAO {
+public interface UtilisateurDAOInterface {
 
     public void ajouter(Utilisateur u);
 

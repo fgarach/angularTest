@@ -13,7 +13,7 @@ import java.util.List;
  *
  * @author admin
  */
-public interface MessageDAO {
+public interface MessageDAOInterface {
     
      public void ajouter(Message m) ;
 
