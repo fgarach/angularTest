@@ -5,7 +5,6 @@
  */
 package forum.service;
 
-import forum.dao.MessageDAO;
 import forum.entity.Message;
 import java.util.List;
 
@@ -13,33 +12,17 @@ import java.util.List;
  *
  * @author admin
  */
-public class MessageService {
+public interface MessageService {
     
-    private MessageDAO mDao = new MessageDAO();
+    public void ajouter(Message m);
 
-    public void ajouter(Message m) {
-        mDao.ajouter(m);
-    }
+    public void supprimer(Long id);
 
-    public void supprimer(Long id) {
-        mDao.supprimer(id);
+    public void modifier(Message m);
 
-    }
+    public Message rechercherParId(Long id);
 
-    public void modifier(Message m) {
-        mDao.modifier(m);
+    public List<Message> listerTous();
 
-    }
-
-    public Message rechercherParId(Long id) {
-        return mDao.rechercherParId(id);
-
-    }
-
-    public List<Message> listerTous() {
-        return mDao.listerTous();
-
-    }
-    
     
 }

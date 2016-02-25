@@ -14,39 +14,16 @@ import javax.persistence.Persistence;
  *
  * @author admin
  */
-public class MessageDAO {
+public interface MessageDAO {
     
-    public void ajouter(Message m) {
-        EntityManager em = Persistence.createEntityManagerFactory("ForumPU").createEntityManager();
-        em.getTransaction().begin();
-        em.persist(m);
-        em.getTransaction().commit();
-    }
+     public void ajouter(Message m) ;
 
-    public void supprimer(Long id) {
-        EntityManager em = Persistence.createEntityManagerFactory("ForumPU").createEntityManager();
-        em.getTransaction().begin();
-        em.createQuery("DELETE FROM Message m WHERE m.id =" + id).executeUpdate();
-        em.getTransaction().commit();
-    }
+    public void supprimer(Long id) ;
 
-    public void modifier(Message m) {
-        EntityManager em = Persistence.createEntityManagerFactory("ForumPU").createEntityManager();
-        em.getTransaction().begin();
-        em.merge(m);
-        em.getTransaction().commit();
-    }
+    public void modifier(Message m);
 
-    public Message rechercherParId(Long id) {
-        EntityManager em = Persistence.createEntityManagerFactory("ForumPU").createEntityManager();
+    public Message rechercherParId(Long id) ;
 
-        return em.find(Message.class, id);
-    }
-
-    public List<Message> listerTous() {
-        EntityManager em = Persistence.createEntityManagerFactory("ForumPU").createEntityManager();
-        return em.createQuery("SELECT m FROM Message m").getResultList();
-
-    }
+    public List<Message> listerTous();
     
 }
