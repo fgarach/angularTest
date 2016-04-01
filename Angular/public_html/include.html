@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html ng-app="monModule">
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="JS/angular.js" type="text/javascript"></script>
+        <script type="text/javascript">
+            var app = angular.module("monModule", []);
+            app.controller("monController", ["$scope", function ($scope) {
+                   $scope.chargeRouteContenu = function(contenu){
+                       $scope.routeContenu = contenu;
+                   }
+            }]);
+        </script>
+    </head>
+    <body ng-controller="monController">
+        <div ng-include="'titre.html'"> </div>
+        <div ng-include="routeContenu">
+            CONTENU
+        </div>
+        <div ng-include="'pied.html'"> </div>
+    </body>
+</html> 
